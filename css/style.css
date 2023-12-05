@@ -131,3 +131,13 @@
 .demo:hover {
     border: 1px solid white;
 }
+
+.buttons{
+    margin: 0 10px;
+}
+
+.buttons button{
+    margin: 10px 0;
+    width: 100%;
+    height: 30px;
+}

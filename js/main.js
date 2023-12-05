@@ -47,3 +47,25 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";  
 }
+
+
+// autoslide
+let interval;
+const btn_start = document.getElementById('start')
+
+const btn_stop = document.getElementById('stop')
+
+function startslide(){
+    interval = setInterval (() =>{
+        slideIndex = (slideIndex + 1) % images.length;
+        showSlides(slideIndex);
+    }, 3000) 
+};
+
+btn_start.addEventListener('click', startslide);
+
+function stopslide(){
+    clearInterval(interval);
+}
+
+btn_stop.addEventListener('click', stopslide);
